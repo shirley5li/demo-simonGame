@@ -1,0 +1,237 @@
+/*引入字体*/
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|VT323|Oswald');
+
+/*CSS reset*/
+html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, 
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas,
+ figure, figcaption, footer, header, hgroup, 
+ menu,  section, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+ 	vertical-align: baseline;
+  
+   /*user-select 特性是非标准的,控制元素能否被选择。none表示元素内的文字及其子元素将不会被选中*/
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+ }
+
+ html {
+ 	background-color: #FFF0F5;
+ }
+ .inline {
+ 	display: inline-block;
+ }
+ .push {
+ 	position: relative;
+ 	width: 200px;
+ 	height: 200px;
+ 	background-color: #D1EEEE;
+ 	border: 12px solid #D1EEEE;
+ }
+ .rw {
+ 	/*margin-bottom: -4px;*/
+ }
+ /*四坨变色区域，1/4圆*/
+ .t-l {
+ 	border-top-left-radius: 100%;
+ }
+ .t-r {
+ 	border-top-right-radius: 100%;
+ }
+ .b-l {
+ 	border-bottom-left-radius: 100%;
+ }
+ .b-r {
+ 	border-bottom-right-radius: 100%;
+ }
+
+ .wrap {
+ 	width: 472px;
+ 	height: 472px;
+ 	border-radius: 100%;
+ 	position: relative;
+ 	text-align: center;
+ 	margin: 0 auto;
+ 	background-color: #D1EEEE;
+ 	top: 10vh;/*vh相对长度单位，表示相对视口高度，10vh=10%*视口高度*/
+ }
+ .wrap-in {
+ 	position: relative;
+ 	top: 10px;
+ }
+ .center {
+ 	width: 220px;
+ 	height: 220px;
+ 	position: absolute;
+ 	border-radius: 100%;
+ 	top: 50%;
+ 	left: 50%;
+ 	margin: -122px 0 0 -122px;
+ 	background-color: #FFFAF0;
+ 	border: 12px solid #B0E0E6;
+ }
+ .brand {
+	font-family: 'Alfa Slab One', cursive;
+	color: #CD8162;
+	font-size: 2.8em;
+	margin-top: 35px;
+ }
+ .brand .small {
+ 	font-size: 0.5em;
+ 	position: relative;
+ 	top: -20px;
+ }
+ .count {
+ 	font-family: 'VT323', monospace;
+ 	color: #CD5555;
+ 	/*padding: 0px;*/
+ 	font-size: 2em;
+ 	width: 50px;
+ 	background-color: #525252;
+ 	/*position: relative;*/
+ 	border: 4px solid #525252;
+ 	border-radius: 10px;
+ 	/*margin: auto;*/
+ }
+ .round-btn {
+ 	width: 20px;
+ 	height: 20px;
+ 	position: relative;
+ 	background-color: #B4EEB4;
+ 	border-radius: 100%;
+ 	border: 4px solid #B4EEB4;
+ 	top: -5px;
+ 	margin: auto;
+ 	box-shadow: 0px 3px 5px #9BCD9B;
+ }
+ .round-btn:active {
+ 	box-shadow: 0 1px 1px #CD5B45;
+ 	top: -4px;
+ }
+ /*用于设置严格模式按钮的颜色为橘色*/
+ .btn-box:nth-of-type(3) .round-btn {
+ 	background-color: #EEC591;
+ 	border: 4px solid #EEC591;
+ 	box-shadow: 0px 3px 5px #DEB887;
+ }
+ .clickable {
+ 	pointer-events: auto;
+ 	cursor: pointer;
+ }
+ .unclickable {
+ 	pointer-events: none;
+ }
+ .led {
+ 	width: 6px;
+ 	height: 6px;
+ 	background-color: #DBDBDB;
+ 	border-radius: 100%;
+ 	border: 1px solid #DBDBDB;
+ 	margin: auto;
+ 	position: relative;
+    top: -65px;
+ }
+ .led-on {
+ 	background-color: #FFFF00;
+ 	border-color: #DBDBDB;
+ }
+ .led-off {
+	background-color: #DBDBDB;
+	border-color: #DBDBDB;
+ }
+ .label {
+ 	color: #222;
+ 	font-family: 'Oswald',Arial,sans;
+ 	font-size: .7em;
+ 	margin-top: 5px;
+ 	text-align: center;
+ }
+ .display {
+ 	width: 60px;
+ 	position: relative;
+ 	text-align: center;
+ }
+ .btn-box {
+ 	width: 50px;
+ 	position: relative;
+ }
+ .sw-slot {
+ 	width: 40px;
+ 	height: 20px;
+ 	background-color: #5B5B5B;
+ 	position: relative;
+    top: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+ }
+ .switch {
+ 	width: 16px;
+ 	height: 16px;
+ 	border-radius: 3px;
+ 	background-color: #FFA54F;
+ 	position: relative;
+ 	border: 2px solid #FFA54F;
+ }
+ .switch-on {
+ 	left: 20px;
+ }
+ .rw.bot {/*注意此处两个类名之间没有空格，表示同时具备这两个类名的元素*/
+ 	margin-top: 10px;
+ }
+ .red {
+ 	background-color: #FF6A6A;
+ }
+.green {
+	background-color: #9BCD9B;
+}
+.yellow {
+	background-color: #FFF68F;
+}
+.blue {
+	background-color: #8DEEEE;
+}
+.red.light {
+	background-color: #EE3B3B;
+}
+.green.light {
+	background-color: #ADFF2F;
+}
+.yellow.light {
+	background-color: #EEEE00;
+}
+.blue.light {
+	background-color: #97FFFF;
+}
+/*移动端缩放，利用@media screen实现网页自适应布局，只有在媒体屏幕尺寸小于500px情况下，才会执行以下代码*/
+@media screen and (max-width: 500px) {
+	.wrap {
+		top: 40px;
+		/*设置元素的缩放比例*/
+		-moz-transform: scale(0.6);
+		-ms-transform: scale(0.6);
+    	-o-transform: scale(0.6);
+    	-webkit-transform: scale(0.6);
+   		transform: scale(0.6);
+   		/*设置元素的缩放基点位置*/
+   		-o-transform-origin: 0 0;
+    	-ms-transform-origin: 0 0;
+   		-webkit-transform-origin: 0 0;
+    	-moz-transform-origin: 0 0;
+    	transform-origin: 0 0;
+
+    	left: 50%;
+    	margin-left: -142px;
+	}
+}
